@@ -1,6 +1,6 @@
 package ex03;
 
-import ex01.Animal;
+import ex03.Animal;
 import ex03.lib.OuterRabbit;
 
 /**

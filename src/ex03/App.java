@@ -18,8 +18,14 @@ import ex03.lib.OuterRabbit;
  */
 public class App {
     public static void main(String[] args) {
+        Doorman doorman = new Doorman();
+        Tiger tiger = new Tiger();
         // Adaptee(외부 객체)를 Adapter로 감싸서 Target(Animal) 인터페이스로 변환
         RabbitAdaptor adaptor = new RabbitAdaptor(new OuterRabbit());
         adaptor.getName(); // getName() → 내부에서 getFullName()으로 변환 → "토끼"
+
+        doorman.chaseOut(tiger);
+
+        doorman.chaseOut(adaptor);
     }
 }
